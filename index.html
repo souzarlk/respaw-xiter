@@ -161,9 +161,9 @@
     button.addEventListener("click",function(){
       var key = button.dataset.key;
       settings[key] = !settings[key];
-      saveSettings();
+      var saved = saveSettings();
       render();
-      resetStatus();
+      if(saved) resetStatus();
       vibrate();
     });
   });
@@ -172,16 +172,15 @@
     settings.fov = Number(fov.value);
     fovValue.value = fov.value;
     fovValue.textContent = fov.value;
-    saveSettings();
-    resetStatus();
+    if(saveSettings()) resetStatus();
   });
 
   document.getElementById("restore").addEventListener("click",function(){
     if(!window.confirm("Restaurar todas as opções para OFF e FOV para 50?")) return;
     settings = Object.assign({},defaults);
-    saveSettings();
+    var saved = saveSettings();
     render();
-    showStatus("Configurações restauradas e salvas.", "ok");
+    if(saved) showStatus("Configurações restauradas e salvas.", "ok");
     vibrate();
   });
 
