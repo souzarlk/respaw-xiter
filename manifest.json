@@ -1,0 +1,21 @@
+{
+  "id": "./",
+  "name": "RESPAW XITER",
+  "short_name": "RESPAW",
+  "description": "Painel de configurações visuais locais RESPAW XITER.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
